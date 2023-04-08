@@ -3,13 +3,15 @@ from .functions import write_csv, fetch_data
 from django.http import JsonResponse, HttpResponse, Http404
 from django.conf import settings
 import os
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 # Create your views here.
-
+@xframe_options_exempt
 def app(request):
 
     return render(request, 'index.html')
 
+@xframe_options_exempt
 def fetch_request(request):
 
     category = request.GET.get('category')
@@ -23,6 +25,7 @@ def fetch_request(request):
 
     return JsonResponse(data)
 
+@xframe_options_exempt
 def download(request):
 
     file_path = os.path.join(settings.MEDIA_ROOT, 'files/wuzzuf.csv')
