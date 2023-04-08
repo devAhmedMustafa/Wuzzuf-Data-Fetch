@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-)2hbrnxpk9l6ir#ufqj24qh!xxmxqpk($%7&p063r*k8%nhvjx
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://wuzzuf-data-fetch-production.up.railway.app']
 
 
 # Application definition
