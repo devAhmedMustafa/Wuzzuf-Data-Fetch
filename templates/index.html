@@ -1,0 +1,36 @@
+{% load static %}
+
+<link rel='stylesheet' href="{% static 'stylesheets/style.css' %}">
+<link rel='stylesheet' href="{% static 'stylesheets/normalize.css' %}">
+<link rel='stylesheet' href="{% static 'stylesheets/loader.css' %}">
+
+<div class="container">
+
+    <div class="header">
+        <img src="{% static 'images/Wuzzuf-Logo.png' %}" width="200px">
+    </div>
+
+    <div class="content">
+        <div class="filtering">
+            <label for="category">Data</label>
+            <input type="text" placeholder="Category" id='category'>
+            <button id='fetch_data'>Get Data</button>
+            <a href="{% url 'download' %}" download="files/wuzzuf.csv" id='download'>Download</a>
+
+            <div class="loader" id="loader" style="display:none">
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__ball"></div>
+              </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script src="{% static 'JS/fetch_data.js' %}">
+</script>

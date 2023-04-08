@@ -1,0 +1,66 @@
+.container{
+    font-family:sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+
+
+.content{
+    background-color: #ffffffe8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.filtering{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtering label, .filtering input, .filtering button{
+   margin: 10px;
+}
+
+.filtering input{
+    padding: 15px
+}
+
+button{
+    padding: 10px;
+    background-color: rgb(54, 54, 54);
+    color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(0, 151, 20);
+    color: whitesmoke;
+    border: none;
+}
+
+.download button{
+    margin: 10px;
+}
+
+.download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
